@@ -1,0 +1,22 @@
+{
+  "name": "sanber56-cypress-kelompok4",
+  "version": "1.0.0",
+  "description": "QA Cypress Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stevhino/Sanber56-Cypress-Kelompok4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stevhino/Sanber56-Cypress-Kelompok4/issues"
+  },
+  "homepage": "https://github.com/Stevhino/Sanber56-Cypress-Kelompok4#readme",
+  "devDependencies": {
+    "cypress": "^13.9.0"
+  }
+}
