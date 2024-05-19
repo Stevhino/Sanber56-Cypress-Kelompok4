@@ -1,0 +1,8 @@
+{
+    "email" : "abc123@sanber.com",
+    "password" : "abc123@sanber",
+    "url" : "https://magento.softwaretestingboard.com/customer/account/login",
+    "invalidEmail" : "abc123@barbar.com",
+    "invalidPassword" : "abc123@barbar",
+    "invalidFormatEmail" : "abc123@sanber"
+}
