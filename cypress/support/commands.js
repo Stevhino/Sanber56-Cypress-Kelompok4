@@ -29,6 +29,16 @@ Cypress.Commands.add('login', () => {
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
+Cypress.Commands.add('clearType',(element,value) => {
+    cy.get(element)
+    .should('be.visible')
+    .clear()
+})
+
+Cypress.Commands.add('requireText',(value,text) => {
+    cy.get(value)
+    .should('contain.text',text)
+})
 //
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
