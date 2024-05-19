@@ -1,12 +1,28 @@
-describe('Login page', () => {
- 
-  //Valid Login
-  it('Success Login', () => {
-    cy.visit('https://magento.softwaretestingboard.com/customer/account/login')
+import pageLogin from "../support/PageObject/PageLogin.cy"
+const dataLogin = require("../fixtures/dataTestLogin.json")
 
-    cy.get('#email').type('abc123@sanber.com')
-    cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').type('abc123@sanber')
-    cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
-    cy.url().should('be.equal','https://magento.softwaretestingboard.com/customer/account/')
+describe('Login page', () => {
+  const login = new pageLogin
+
+  //visit url
+  beforeEach(() => {
+    cy.visit(dataLogin.url)
   })
+  
+  //Invalid Login
+  it('login with invalid email', () => {
+    login.inputEmail(dataLogin.invalidEmail)  //invalid email
+    login.inputPassword(dataLogin.password)   //password
+    login.clickLogin()                        //click login button
+    login.errorMsgInvalidEmail()              //error message
+    })
+
+  //Valid Login
+  it('Login success', () => {
+    login.inputEmail(dataLogin.email)       //email
+    login.inputPassword(dataLogin.password) //password
+    login.clickLogin()                      //click login button
+    login.checkUrl()                        //check url
+  })
+
 })
