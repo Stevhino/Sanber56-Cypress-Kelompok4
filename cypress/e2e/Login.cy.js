@@ -7,14 +7,28 @@ describe('Login page', () => {
   //visit url
   beforeEach(() => {
     cy.visit(dataLogin.url)
-  })
-  
+  })    
+
   //Invalid Login
-  it('login with invalid email', () => {
+  it('login with incorrect email', () => {
     login.inputEmail(dataLogin.invalidEmail)  //invalid email
     login.inputPassword(dataLogin.password)   //password
     login.clickLogin()                        //click login button
-    login.errorMsgInvalidEmail()              //error message
+    login.errorMsgIncorrect()              //error message
+    })
+
+  it('login with incorrect password', () => {
+    login.inputEmail(dataLogin.invalidEmail)  //invalid email
+    login.inputPassword(dataLogin.invalidPassword)   //password
+    login.clickLogin()                        //click login button
+    login.errorMsgIncorrect()              //error message
+    })
+
+  it('login with invalid format email', () => {
+    login.inputEmail(dataLogin.invalidFormatEmail)  //invalid email
+    login.inputPassword(dataLogin.password)   //password
+    login.clickLogin()                        //click login button
+    login.errorMsgInvalid()              //error message
     })
 
   //Valid Login
