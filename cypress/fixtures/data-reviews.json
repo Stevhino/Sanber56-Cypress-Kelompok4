@@ -1,0 +1,22 @@
+{
+  "reviews": [
+    {
+      "nickname": "Stevhino",
+      "summary": "Great product really!",
+      "review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "rating": 5
+    },
+    {
+      "nickname": "Jojoe",
+      "summary": "Not what I expected",
+      "review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry..",
+      "rating": 2
+    },
+    {
+      "nickname": "Oliv Stevani",
+      "summary": "Average quality",
+      "review": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      "rating": 3
+    }
+  ]
+}
